@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Eklakh Dewan</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .contact-layout{display:flex;flex-wrap:wrap;gap:30px;margin-top:20px}
+    .contact-form,.my-contacts{flex:1 1 320px;background:var(--card-bg);padding:25px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.12)}
+    .my-contacts ul{list-style:none;padding:0;margin-top:10px}
+    .my-contacts li{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+    .my-contacts i{color:var(--secondary)}
+    .contact-form button{background:linear-gradient(90deg,var(--secondary),var(--accent));color:#fff;border:none;padding:12px 20px;margin-top:15px;border-radius:8px;font-weight:700;cursor:pointer;transition:transform .2s, box-shadow .2s}
+    .contact-form button:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.15)}
+    .contact-note{font-size:.95rem;opacity:.9;margin-top:10px}
+    .contact-card{padding:12px;border-radius:10px;background:rgba(0,0,0,0.04);transition:transform .2s}
+    .contact-card:hover{transform:translateY(-3px)}
+    @media (max-width:768px){.contact-layout{gap:20px}}
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="theme-toggle" hidden>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <label for="theme-toggle" class="theme-toggle">🌙</label>
+  </header>
+
+  <main>
+    <section class="reveal">
+      <h2>Let’s Build Something Great Together</h2>
+      <p>Whether you’re hiring, collaborating, or exploring ideas—drop a message or use the contacts alongside.</p>
+
+      <div class="contact-layout">
+        <!-- Form -->
+        <form action="https://formspree.io/f/mrbldebq" method="POST" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" name="name" required>
+
+          <label for="number">Phone Number</label>
+          <input type="tel" name="number">
+
+          <label for="email">Email</label>
+          <input type="email" name="email" required>
+
+          <label for="message">Message</label>
+          <textarea name="message" rows="5" required></textarea>
+
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          <p class="contact-note">Powered by Formspree. I’ll get back to you soon.</p>
+        </form>
+
+        <!-- My Contacts -->
+        <aside class="my-contacts">
+          <h3>My Contacts</h3>
+          <ul>
+            <li class="contact-card"><i class="fas fa-envelope"></i> <a href="mailto:eklakhdewan78@gmail.com">eklakhdewan78@gmail.com</a></li>
+            <li class="contact-card"><i class="fas fa-phone"></i> <a href="tel:+918092158233">+91 8092158233</a></li>
+            <li class="contact-card"><i class="fas fa-map-marker-alt"></i> Coimbatore, India</li>
+            <li class="contact-card"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/eklakh-dewan" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li class="contact-card"><i class="fab fa-github"></i> <a href="https://github.com/Eklakh-Dewan" target="_blank" rel="noopener">GitHub</a></li>
+            <!-- Add more socials if needed -->
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eklakh Dewan</p>
+  </footer>
+</body>
+</html>
